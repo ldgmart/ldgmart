@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="app">
+  <v-app>
+    <MainToolbar></MainToolbar>
+    <v-content>
+      <router-view/>
+    </v-content>
+    <v-footer >
+      <v-layout text-xs-center >
+     
+                <v-flex >
+                  <router-link  to="/Privacy">   개인정보 처리방침   </router-link>
+                     
+                 <!-- <v-btn primary flat href="/#/Privacy" target="_self">개인정보처리방침 
+                   </v-btn>-->
+                     <v-divider :inset="inset" vertical></v-divider> 
+                     <router-link to="/Privacy">   이용약관   </router-link>
+                    </v-flex>
+         
+            </v-layout>
+    </v-footer>
+  </v-app>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+import MainToolbar from '@/components/MainToolbar.vue'
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    MainToolbar
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

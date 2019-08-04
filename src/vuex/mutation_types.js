@@ -1,0 +1,6 @@
+export const IS_LOGINED = 'IS_LOGINED'
+export const POST_CONTENTS = 'POST_CONTENTS'
+export const POST_TITLE = 'POST_TITLE'
+export const POST_DATE = 'POST_DATE'
+export const ADD_COMMENT = 'ADD_COMMENT'
+export const ADD_REPLY = 'ADD_REPLY'
